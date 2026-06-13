@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Distribution/" />
+  <Project Path="LoginService/LoginService.csproj" Id="9dfc2e0f-1bf5-459d-8895-6b5c73ab145f" />
+  <Project Path="OrderService/OrderService.csproj" />
+  <Project Path="ProductService/ProductService.csproj" />
+  <Project Path="Shared/Shared.csproj" Id="f3c3acbb-7c24-44ff-a86d-9af550c3edc7" />
+</Solution>
