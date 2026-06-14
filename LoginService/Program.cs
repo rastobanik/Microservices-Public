@@ -19,7 +19,7 @@ try
 
     var app = builder.Build();
 
-    app.UseCustomSerilogRequestLogging(builder.Configuration);
+    //app.UseCustomSerilogRequestLogging(builder.Configuration);
 
     // Configure the HTTP request pipeline.
     // Configure the HTTP request pipeline.
