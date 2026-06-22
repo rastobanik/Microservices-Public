@@ -1,5 +1,12 @@
 <Solution>
-  <Folder Name="/Distribution/" />
+  <Folder Name="/BuildingBlocks/">
+    <Project Path="Logging/Logging.csproj" Id="6ca6e58d-a66c-4ef1-8c45-e393bedf5dde" />
+    <Project Path="RateLimiting/RateLimiting.csproj" Id="6a071a4a-d905-4edc-babf-ab8ef0306b13" />
+    <Project Path="Redis/Redis.csproj" Id="1ec73386-6571-43ea-94f3-a26d3114030e" />
+  </Folder>
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
   <Project Path="LoginService/LoginService.csproj" Id="9dfc2e0f-1bf5-459d-8895-6b5c73ab145f" />
   <Project Path="OrderService/OrderService.csproj" />
   <Project Path="ProductService/ProductService.csproj" />

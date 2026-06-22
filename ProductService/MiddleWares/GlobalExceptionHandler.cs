@@ -40,7 +40,7 @@ namespace ProductService.MiddleWares
             problem.Extensions["correlationId"] = correlationId;
 
             context.Response.StatusCode = problem.Status.Value;
-            context.Response.ContentType = "application/json";
+            context.Response.ContentType = "application/problem+json";
 
             await context.Response.WriteAsJsonAsync(problem, cancellationToken);
 

@@ -9,8 +9,6 @@ try
 
     builder.Host.UseSerilog((ctx, loggerConfig) => loggerConfig.ReadFrom.Configuration(ctx.Configuration));
 
-    Log.Information("Starting up application");
-
     // Add services to the container.
 
     builder.Services.AddControllers();
@@ -18,8 +16,6 @@ try
     builder.Services.AddOpenApi();
 
     var app = builder.Build();
-
-    app.UseCustomSerilogRequestLogging(builder.Configuration);
 
     // Configure the HTTP request pipeline.
     // Configure the HTTP request pipeline.

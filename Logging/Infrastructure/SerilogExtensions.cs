@@ -1,8 +1,10 @@
-﻿using OrderService.Configurations.Options;
+﻿using Logging.Configuration;
 using Serilog;
 using Serilog.Events;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
 
-namespace OrderService.Infrastructure
+namespace Logging.Infrastructure
 {
     public static class SerilogExtensions
     {

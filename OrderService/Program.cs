@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using OrderService.Application.Orders;
@@ -8,8 +9,10 @@ using OrderService.Infrastructure;
 using OrderService.Infrastructure.Http;
 using OrderService.MiddleWares;
 using Serilog;
+using Serilog.Events;
 using Shared.Infrastructure;
-
+using StackExchange.Redis;
+using System.Threading.RateLimiting;
 
 try
 {
@@ -25,7 +28,7 @@ try
     // add memory cache
     builder.Services.AddMemoryCache();
 
-    // add distributed cache
+    // add ditributed cache
     builder.Services.AddCustomRedis(builder.Configuration);
 
     // rateLimiting
@@ -70,6 +73,8 @@ try
 
     var app = builder.Build();
 
+    app.UseMiddleware<CorrelationIdMiddleware>();
+
     app.UseCustomSerilogRequestLogging(builder.Configuration);
 
     // Configure the HTTP request pipeline.
@@ -80,14 +85,10 @@ try
         _ = app.UseSwaggerUI();
     }
 
-    app.UseRateLimiter();
-
-    var orders = new List<Order>();
-
-    app.UseMiddleware<CorrelationIdMiddleware>();
-
     app.UseExceptionHandler();
 
+    app.UseRateLimiter();
+    
     app.UseHttpsRedirection();
 
     app.MapOrderEndpoints();
