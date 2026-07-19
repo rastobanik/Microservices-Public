@@ -1,6 +1,6 @@
 # MicroservicesProject
 
-🚧 Educational project focused on learning microservice architecture and modern .NET ecosystem. Work in progress.
+🚧 A hands-on project focused on exploring modern .NET backend architecture and microservice-related patterns.
 
 ---
 
