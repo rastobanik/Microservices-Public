@@ -1,86 +1,144 @@
 # MicroservicesProject
 
-🚧 A hands-on project focused on exploring modern .NET backend architecture and microservice-related patterns.
+🚧 Work in progress – a practical project focused on exploring modern .NET backend architecture, distributed systems concepts, and software engineering practices.
+
+## Overview
+
+This repository contains a backend project created to explore and implement modern approaches used in enterprise .NET applications.
+
+The main focus of the project:
+
+- Microservice architecture patterns
+- Clean architecture principles
+- API design
+- Application reliability
+- Observability
+- Scalability and maintainability
+
+The project serves as a technical playground for evaluating architectural approaches and applying backend development practices in a realistic environment.
 
 ---
 
-## 📌 Overview
+# Technology Stack
 
-This project is designed to explore and practice building scalable microservices using modern .NET technologies and best practices. It focuses on clean architecture, performance, observability, and real-world backend patterns.
+## Backend
 
----
-
-## 🛠️ Tech Stack
-
-### .NET Core
 - .NET 10
-- Minimal APIs
-- Middleware pipeline
-  - CorrelationId Middleware
-  - Global Exception Handling Middleware
-- Rate Limiting (global + per endpoint)
-- Memory Cache
-- Distributed Cache (Redis)
-- Pagination
+- ASP.NET Core Minimal APIs
 
-### Observability & Logging
-- Serilog
-- Seq
+Middleware pipeline:
 
----
+- Correlation ID handling
+- Global exception handling
 
-## 🧭 Architecture Goals
+Application features:
 
-- Microservices-based architecture
-- Clean separation of concerns
-- Scalable and maintainable design
-- Cloud-ready structure
+- Request rate limiting
+  - Global rate limits
+  - Endpoint-specific limits
+- Memory caching
+- Distributed caching with Redis
+- Pagination support
 
 ---
 
-## 📦 Planned Features
+## Logging & Observability
 
-### Data & Persistence
-- EF Core
+Implemented:
+
+- Structured logging using Serilog
+- Log analysis using Seq
+
+Planned:
+
+- OpenTelemetry integration
+- Prometheus metrics
+- Grafana dashboards
+
+---
+
+## Data Access
+
+Planned:
+
+- Entity Framework Core
 - PostgreSQL
 
-### Security
+---
+
+## Communication & Messaging
+
+Planned:
+
+- Asynchronous communication patterns
+- Message broker integration:
+  - RabbitMQ
+  - Kafka
+
+---
+
+## Security & Validation
+
+Planned:
+
 - Authentication
 - Authorization
-
-### Validation
 - Fluent Validation
 
-### Messaging & Communication
-- Message Broker (e.g. RabbitMQ / Kafka)
+---
 
-### Observability
-- OpenTelemetry
-- Prometheus
-- Grafana
+# Architecture Goals
 
-### API Gateway
-- Centralized entry point for microservices
+The project focuses on:
+
+- Clear separation of responsibilities
+- Maintainable application structure
+- Scalable service design
+- Centralized error handling
+- Reliable API communication
+- Production-oriented development practices
 
 ---
 
-## 🧪 Testing Strategy
+# Implemented Features
 
-- Unit Tests
-- Integration Tests
+- ✅ ASP.NET Core application structure
+- ✅ Custom middleware pipeline
+- ✅ Global exception handling
+- ✅ Correlation ID propagation
+- ✅ Request rate limiting
+- ✅ Memory and distributed caching
+- ✅ Structured application logging
 
 ---
 
-## 🚀 Status
+# Planned Features
 
-Work in progress — project is actively evolving as part of learning journey.
+- Microservice decomposition
+- API Gateway
+- Authentication and authorization
+- Validation layer
+- Database integration
+- Asynchronous communication
+- Docker containerization
+- CI/CD automation
+- Automated testing
 
 ---
 
-## 📚 Purpose
+# Testing Strategy
 
-This repository serves as a hands-on learning project to understand:
-- Microservice architecture patterns
-- Backend scalability concepts
-- Distributed systems challenges
-- Modern .NET development practices
+Planned testing approach:
+
+- Unit tests
+- Integration tests
+
+The goal is to demonstrate approaches for improving reliability and maintainability of backend services.
+
+---
+
+# Purpose
+
+This project is a personal exploration of modern .NET backend development and architectural patterns commonly used in enterprise applications.
+
+The focus is not only on individual technologies, but also on understanding architectural decisions and trade-offs involved in designing maintainable backend systems.
