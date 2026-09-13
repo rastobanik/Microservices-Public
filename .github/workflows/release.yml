@@ -1,0 +1,41 @@
+name: .NET Release
+
+permissions:
+  contents: write
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v6
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v5
+      with:
+        dotnet-version: 10.0.x
+
+    - name: Restore
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+
+    - name: Publish
+      run: dotnet publish -c Release -o publish
+
+    - name: Zip output
+      run: Compress-Archive -Path publish\* -DestinationPath app.zip
+
+    - name: Upload release asset
+      uses: softprops/action-gh-release@v2
+      with:
+        files: app.zip
