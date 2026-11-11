@@ -45,9 +45,8 @@ Application features:
 ## Logging & Observability
 
 Implemented:
-
-- Structured logging using Serilog
-- Log analysis using Seq
+- ✅ Structured logging using Serilog
+- ✅ Log analysis using Seq
 
 Planned:
 
