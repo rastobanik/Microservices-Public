@@ -109,6 +109,8 @@ The project focuses on:
 - ✅ Request rate limiting
 - ✅ Memory and distributed caching
 - ✅ Structured application logging
+- ✅ Docker containerization
+- ✅ CI/CD automation
 
 ---
 
@@ -120,8 +122,6 @@ The project focuses on:
 - Validation layer
 - Database integration
 - Asynchronous communication
-- Docker containerization
-- CI/CD automation
 - Automated testing
 
 ---
