@@ -122,7 +122,8 @@ The project focuses on:
 - Database integration
 - Asynchronous communication
 - Automated testing
-
+- Resilience
+  
 ---
 
 # Testing Strategy
